@@ -25,6 +25,9 @@ switch ($text){
   case "che fai?":
     $text = "programmo tu?";
     break;
+  case "niente":
+    $text="capito";
+    break;
   default:
     $text="non capisco";
     break;
