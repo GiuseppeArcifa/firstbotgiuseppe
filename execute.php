@@ -15,8 +15,22 @@ $lastname = isset($message['chat']['last_name']) ? $message['chat']['last_name']
 $username = isset($message['chat']['username']) ? $message['chat']['username'] : "";
 $date = isset($message['date']) ? $message['date'] : "";
 $text = isset($message['text']) ? $message['text'] : "";
-if($text=="ciao")
-  $text="ciao $firstname come stai?";
+switch ($text){
+  case "ciao":
+    $text="ciao $firstname come stai?";
+    break;
+  case "tutto bene tu?":
+    $text = "benissimo grezie!";
+    break;
+  case "che fai?":
+    $text = "programmo tu?";
+    break;
+  default:
+    $text="non capisco";
+    break;
+}
+    
+    
 $text = trim($text);
 $text = strtolower($text);
 
