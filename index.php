@@ -12,6 +12,8 @@ $text = $update["message"]["text"];
 
 $mess="ciao come stai?";
 
+$agg = json($update,JSON_PRETTY_PRINT);
+
 sendMessage($chatId,$mess);
 
 function sendMessage($chatId,$text)
