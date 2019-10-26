@@ -17,19 +17,31 @@ $date = isset($message['date']) ? $message['date'] : "";
 $text = isset($message['text']) ? $message['text'] : "";
 switch ($text){
   case "ciao":
-    $text="ciao $firstname come stai?";
+    $text="Ciao $firstname come stai?";
+    break;
+  case "Ciao":
+    $text="Ciao $firstname come stai?";
+    break;
+  case "Tutto bene tu?":
+    $text = "Benissimo grezie!";
     break;
   case "tutto bene tu?":
-    $text = "benissimo grezie!";
+    $text = "Benissimo grezie!";
     break;
+  case "Che fai?":
+    $text = "Programmo tu?";
+    break
   case "che fai?":
-    $text = "programmo tu?";
+    $text = "Programmo tu?";
+    break;
+  case "Niente":
+    $text="Capito";
     break;
   case "niente":
-    $text="capito";
+    $text="Capito";
     break;
   default:
-    $text="non capisco";
+    $text="Non capisco";
     break;
 }
     
