@@ -1,14 +1,20 @@
 <?php
-$botToken = "997280523:AAGScn7XbNbKaeFu9Jgo1bh9f-8HvVuyZm0";
+$content = file_get_contents("php://input");
+$update = json_decode($content, true);
 
-$website = "https://api.telegram.org/bot".$botToken;
+if(!$update)
+{
+  exit;
+}
 
-$update = file_get_contents("php://input");
-$update = json_decode($update , true);
-
-$chatId=$uodate["message"]["from"]["id"];
-$text = $update["message"]["text"];
-
+$message = isset($update['message']) ? $update['message'] : "";
+$messageId = isset($message['message_id']) ? $message['message_id'] : "";
+$chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
+$firstname = isset($message['chat']['first_name']) ? $message['chat']['first_name'] : "";
+$lastname = isset($message['chat']['last_name']) ? $message['chat']['last_name'] : "";
+$username = isset($message['chat']['username']) ? $message['chat']['username'] : "";
+$date = isset($message['date']) ? $message['date'] : "";
+$text = isset($message['text']) ? $message['text'] : "";
 switch ($text){
   case "ciao":
     $text="Ciao $firstname come stai?";
@@ -43,16 +49,22 @@ switch ($text){
   case "ho fame":
     $text = "io no";
     break;
+  case "ou":
+    $tastiera ="['ciao'],['tu?']";
   default:
     $text="Non capisco";
     break;
 }
-sendMessage($chatId,$text);
+    
+    
+$text = trim($text);
+$text = strtolower($text);
 
-function sendMessage($chatId,$text)
-{
-    $url = $website."/sendMessage?chat_id=$chatId&text=".urlencode($text);
-    file_get_contents($url);
-}
-
+header("Content-Type: application/json");
+if(isset($tastiera))
+$parameters = array('chat_id' => $chatId, "text" => $text,"reply_markup" => '{"keyboard":['.$tastiera.'],"resize_keyboard":true}');
+else
+  $parameters = array('chat_id' => $chatId, "text" => $text);
+$parameters["method"] = "sendMessage";
+echo json_encode($parameters);
 ?>
