@@ -50,7 +50,8 @@ switch ($text){
     $text = "io no";
     break;
   case "ou":
-    $tastiera ="['ciao'],['tu?']";
+    $tastiera =[['ciao'],['tu?']];
+    $tastiera=json_encode($tastiera);
   default:
     $text="Non capisco";
     break;
@@ -62,7 +63,7 @@ $text = strtolower($text);
 
 header("Content-Type: application/json");
 if(isset($tastiera))
-$parameters = array('chat_id' => $chatId, "text" => $text,"reply_markup" => '{"keyboard":['.$tastiera.'],"resize_keyboard":true}');
+$parameters = array('chat_id' => $chatId, "text" => $text,"reply_markup" =>$tastiera);
 else
   $parameters = array('chat_id' => $chatId, "text" => $text);
 $parameters["method"] = "sendMessage";
