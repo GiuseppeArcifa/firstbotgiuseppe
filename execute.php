@@ -51,7 +51,7 @@ sendMessage($chatId,$text);
 
 function sendMessage($chatId,$text)
 {
-    $url = $GLOBALS[website]."/sendMessage?chat_id=$chatId&text=".urlencode($text);
+    $url = $website."/sendMessage?chat_id=$chatId&text=".urlencode($text);
     file_get_contents($url);
 }
 
