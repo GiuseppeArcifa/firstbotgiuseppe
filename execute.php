@@ -46,6 +46,9 @@ switch ($text){
   case "niente":
     $text="Capito";
     break;
+  case "ho fame":
+    $text = "io no";
+    break;
   default:
     $text="Non capisco";
     break;
