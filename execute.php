@@ -49,12 +49,8 @@ switch ($text){
   case "ho fame":
     $text = "io no";
     break;
-  case "ou":
-    $tastiera =array(
-    'keyboard' => array(
-        array("A", "B")
-    )
-);
+  case "giochiamo?":
+    $tastiera =array('keyboard' => array("pari/dispari", "tic tac toe"));
     $text = "test";
    // $tastiera=json_encode($tastiera);
   default:
