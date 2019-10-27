@@ -23,10 +23,16 @@ switch ($text){
     $text="Ciao $firstname come stai?";
     break;
   case "Tutto bene tu?":
-    $text = "Benissimo grezie!";
+    $text = "Benissimo grazie!";
     break;
   case "tutto bene tu?":
-    $text = "Benissimo grezie!";
+    $text = "Benissimo grazie!";
+    break;
+   case "bene tu?":
+    $text = "Benissimo grazie!";
+    break;
+  case "Bene tu?":
+    $text = "Benissimo grazie!";
     break;
   case "Che fai?":
     $text = "Programmo tu?";
