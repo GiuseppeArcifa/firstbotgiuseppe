@@ -51,7 +51,7 @@ switch ($text){
     break;
   case "ou":
     $tastiera =[['ciao'],['tu?']];
-    $tastiera=json_encode($tastiera);
+   // $tastiera=json_encode($tastiera);
   default:
     $text="Non capisco";
     break;
