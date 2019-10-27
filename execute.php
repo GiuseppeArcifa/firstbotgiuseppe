@@ -55,7 +55,7 @@ switch ($text){
         array("A", "B")
     )
 );
-    $text = "test"
+    $text = "test";
    // $tastiera=json_encode($tastiera);
   default:
     $text="Non capisco";
