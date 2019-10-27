@@ -36,7 +36,7 @@ switch ($text){
     break;
   case "Che fai?":
     $text = "Programmo tu?";
-    break
+    break;
   case "che fai?":
     $text = "Programmo tu?";
     break;
