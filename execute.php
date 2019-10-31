@@ -50,7 +50,7 @@ switch ($text){
     $text = "io no";
     break;
   case "giochiamo?":
-    $tastiera =array('keyboard' => array("pari/dispari", "tic tac toe"));
+    $tastiera =$tastiera =array('keyboard' => array(array("A", "B"));
     $text = "test";
    // $tastiera=json_encode($tastiera);
     break;
