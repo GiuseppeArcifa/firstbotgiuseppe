@@ -32,7 +32,7 @@
           sendMessage($chatId,eval('return '.$text.';'));
          exit();
    }
-   $esempiotastierainline = '[{"text":"Testo","url":"http://yt.alexgaming.me"},{"text":"Inline","switch_inline_query":"Ciao!"}],[{"text":"Testo","callback_data":"StampaMessaggio"},{"text":"Modifica Messaggio","callback_data":"ModificaMessaggio"}]';
+   $esempiotastierainline = '[{"text":"Testo","url":"https://www.google.it/"},{"text":"Inline","switch_inline_query":"Ciao!"}],[{"text":"Testo","callback_data":"StampaMessaggio"},{"text":"Modifica Messaggio","callback_data":"ModificaMessaggio"}]';
   switch($text){
     case "/start":
         sendMessage($chatId,"Weyla!");
@@ -96,7 +96,7 @@
           "id" => "0",
           "title" => "Titolo del Result",
           "input_message_content" => array("message_text" => "Testo del Result", "parse_mode" => "HTML"),
-          "reply_markup" => array("inline_keyboard" => [[array("text" => "CLICCA QUI","url" => "yt.alexgaming.me")],[array("text" => "CLICCA QUI","callback_data" => "StampaMessaggio")]]),
+          "reply_markup" => array("inline_keyboard" => [[array("text" => "CLICCA QUI","url" => "https://www.google.it/")],[array("text" => "CLICCA QUI","callback_data" => "StampaMessaggio")]]),
           "description" => "Descrizione del result",
           ],
           [
@@ -104,7 +104,7 @@
               "id" => "1",
               "title" => "Invia le tue informazioni",
               "input_message_content" => array("message_text" => "$infoUtente", "parse_mode" => "HTML"),
-              "reply_markup" => array("inline_keyboard" => [[array("text" => "CLICCA QUI","url" => "yt.alexgaming.me")],[array("text" => "CLICCA QUI","callback_data" => "StampaMessaggio")]]),
+              "reply_markup" => array("inline_keyboard" => [[array("text" => "CLICCA QUI","url" => "www.google.it/")],[array("text" => "CLICCA QUI","callback_data" => "StampaMessaggio")]]),
               "description" => "Descrizione del result",
               ],
       ];
