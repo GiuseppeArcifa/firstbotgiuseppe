@@ -53,6 +53,7 @@ switch ($text){
     $tastiera =array('keyboard' => array("pari/dispari", "tic tac toe"));
     $text = "test";
    // $tastiera=json_encode($tastiera);
+    break;
   default:
     $text="Non capisco";
     break;
